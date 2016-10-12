@@ -1,0 +1,36 @@
+/* Ballwrapper div */
+
+#ballWrapper {
+	/* background-color just to test that styles took. */
+	/*background-color: #665696;*/
+	width: 140px;
+	height: 300px;
+	position: fixed;
+	/* 	50% left and top positions, and neg. top and left margins (half the original height/width of the div)
+			to center the ball on the screen */
+	left: 50%;
+	top: 50%;
+	margin: -150px 0 0 -70px;
+}
+
+
+/* Ball div */
+
+#ball {
+	width: 140px;
+	height: 140px;
+	/* Border-radius is half of the width/height above, so the ball is round and not an oval. */
+	border-radius: 70px;
+	/* Ball's background is linear gradient, with 3 levels of box-shadows for 3d effect. */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(187,187,187,1)), color-stop(99%, rgba(119,119,119,1)));
+	background: -webkit-linear-gradient(top, rgba(187,187,187,1) 0%, rgba(119,119,119,1) 99%);
+	background: linear-gradient(top, rgba(187,187,187,1) 0%, rgba(119,119,119,1) 99%);
+	/*	First level is the darker shadow at bottom of ball. Second gives the blurry glow, also at bottom.
+		  Third is a barely-there blur behind the ball's contours. */
+	-webkit-box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4),
+											inset -2px -1px 40px rgba(0,0,0,0.4),
+											0 0 1px #000;
+	box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4),
+								inset -2px -1px 40px rgba(0,0,0,0.4),
+								0 0 1px #000;
+}
