@@ -34,3 +34,39 @@
 								inset -2px -1px 40px rgba(0,0,0,0.4),
 								0 0 1px #000;
 }
+
+/* Reflection at top of ball */
+
+#ball::after {
+	content: "";
+	width: 80px;
+	height: 40px;
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	background: -webkit-gradient(linear,  left top, left bottom,  from(rgba(232,232,232,1)),color-stop(1%, rgba(232,232,232,1)),to(rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	/* border-radius at 40px/20px creates oval shape. */
+	border-radius: 40px / 20px;
+}
+
+/* Ball's shadow */
+
+#ballShadow {
+	width: 60px;
+	height: 75px;
+	position: absolute;
+	/* Z-index specifies the stack order of elements, so here, keeps it behind/under the ball.
+	Seems important for  when ball bounces. Shadow stays behind the ball. */
+	z-index: 0;
+	/* Position shadow at bottom of #ballWrapper */
+	bottom: 0;
+	left: 50%;
+	margin-left: -30px;
+	/* Semi-transparent background */
+	background: rgba(20, 20, 20, .1);
+	-webkit-box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+	        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+	border-radius: 30px / 40px;
+}
