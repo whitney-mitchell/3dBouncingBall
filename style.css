@@ -190,7 +190,7 @@
 /* To make the shadow realistic as the ball bounces (changing it's distance from the ground), must adjust
 shadow's width, height, and opacity. While ball is close to the floor, shadow should be darker and smaller.
 While ball is in the air the shadow should be lighter and larger. */
-@keyframes shrink {
+@-webkit-keyframes shrink {
 	0% {
 		bottom: 0;
 		margin-left: -30px;
@@ -200,7 +200,8 @@ While ball is in the air the shadow should be lighter and larger. */
 		-webkit-box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
 		        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
 		border-radius: 30px / 40px;
-		animation-timing-function: ease-in;
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
 	}
 	50% {
 		bottom: 30px;
@@ -211,7 +212,8 @@ While ball is in the air the shadow should be lighter and larger. */
 		-webkit-box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
 		        box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
 		border-radius: 20px / 20px;
-		animation-timing-function: ease-out;
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
 	}
 	100% {
 		bottom: 0;
@@ -222,6 +224,45 @@ While ball is in the air the shadow should be lighter and larger. */
 		-webkit-box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
 		        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
 		border-radius: 30px / 40px;
-		animation-timing-function: ease-in;
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+	}
+}
+@keyframes shrink {
+	0% {
+		bottom: 0;
+		margin-left: -30px;
+		width: 60px;
+		height: 75px;
+		background: rgba(20, 20, 20, .1);
+		-webkit-box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		border-radius: 30px / 40px;
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+	}
+	50% {
+		bottom: 30px;
+		margin-left: -10px;
+		width: 20px;
+		height: 5px;
+		background: rgba(20, 20, 20, .3);
+		-webkit-box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+		        box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+		border-radius: 20px / 20px;
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
+	}
+	100% {
+		bottom: 0;
+		margin-left: -30px;
+		width: 60px;
+		height: 75px;
+		background: rgba(20, 20, 20, .1);
+		-webkit-box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		border-radius: 30px / 40px;
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
 	}
 }
