@@ -42,9 +42,9 @@
 	/* Border-radius is half of the width/height above, so the ball is round and not an oval. */
 	border-radius: 70px;
 	/* Ball's background is linear gradient, with 3 levels of box-shadows for 3d effect. */
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(200,100,150,1)), color-stop(99%, rgba(102,86,150,1)));
-	background: -webkit-linear-gradient(top, rgba(200,100,150,1) 0%, rgba(102,86,150,1) 99%);
-	background: linear-gradient(top, rgba(200,100,150,1) 0%, rgba(102,86,150,1) 99%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(238,161,199,1)), color-stop(99%, rgba(102,86,150,1)));
+	background: -webkit-linear-gradient(top, rgba(238,161,199,1) 0%, rgba(102,86,150,1) 99%);
+	background: linear-gradient(top, rgba(238,161,199,1) 0%, rgba(102,86,150,1) 99%);
 	/*	First level is the darker shadow at bottom of ball. Second gives the blurry glow, also at bottom.
 			Third is a barely-there blur behind the ball's contours. */
 	-webkit-box-shadow: inset 0 -5px 15px rgba(280,255,255,0.4),
